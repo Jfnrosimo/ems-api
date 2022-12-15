@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { authenticateWithToken } from "../auth.js";
+// import { authenticateWithToken } from "../auth.js";
 import { handle404, handleError } from "../errors.js";
 import authRouter from "./auth.js";
 import answerRouter from "./answer.js";
@@ -16,7 +16,7 @@ import urls from "../urls.js";
 const router = Router();
 
 // Authentication
-router.use(authenticateWithToken);
+// router.use(authenticateWithToken);
 router.use(urls.apiPrefix + urls.auth.path, authRouter);
 
 // CRUD API
